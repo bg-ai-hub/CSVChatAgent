@@ -22,8 +22,9 @@ if not os.path.exists(local_csv_path):
     raise FileNotFoundError(f"The file {local_csv_path} does not exists.")
 
 python_agent = PythonAgent(
-    #model=Groq(id="llama-3.3-70b-versatile"),
-    model=OpenAIChat(id="gpt-4o-mini"),
+    model=Groq(id="llama-3.3-70b-versatile"),
+    #model=Groq(id="Llama-3.3-70b-Specdec"),
+    #model=OpenAIChat(id="gpt-4o-mini"),
     base_dir = tmp,
     files=[
         CsvFile(
